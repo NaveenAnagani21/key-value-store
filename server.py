@@ -5,7 +5,7 @@ class Server:
     def __init__(self, host, port):
         self.host = host
         self.port = port
-        self.store = kvstore()  # Create an instance of your data store
+        self.store = kvstore()  # Create an instance of  data store
 
     def start(self):
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -67,5 +67,5 @@ class Server:
             return "ERR: Unknown command\n"
 
 if __name__ == "__main__":
-    server = Server("localhost", 6379)  # Replace with desired host and port
+    server = Server("localhost", 6379) 
     server.start()
